@@ -42,13 +42,12 @@ $mail->setFrom('example@example.com')
 $mail = new JacksonJeans\Mail();
 $mail->setFrom('example@example.com', 'Example');
  
-// go method to( $toEmail )
 $mail->to('general.julian.tietz@outlook.com')
 	->setSubject('Account activation')
 	->setHTML('<html><body><p><b>Your account has activated!</b></p></body></html>', true)
 	->send();
 
-// go method compose( $toEmail, $subject, $text )	
+// method compose( $toEmail, $subject, $text )	
 $mail->compose('admin@example.com', 'New Account', 'http://example.com/useradmin/123')->send();
 ```
 <a name="smtp"></a>
